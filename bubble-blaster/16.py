@@ -137,6 +137,10 @@ while time.time() < end:
     move_bubbles()
     clean_up_bubbles()
     score += collision()
+    if keyboard.press(' '):
+        bubble_id.clear()
+        bubble_speed.clear()
+        bubble_radius.clear()
     if (int(score / BONUS_SCORE)) > bonus:
         bonus += 1
         end += TIME_LIMIT
